@@ -1,0 +1,44 @@
+<resources>
+    <string name="accept">Accept</string>
+    <string name="app_name">Shoe Inventory</string>
+    <string name="cancel">Cancel</string>
+    <string name="email">Email</string>
+
+    <string name="error_details">Required fields cannot be empty.</string>
+    <string name="error_email">Invalid email</string>
+    <string name="error_password">Password too short</string>
+
+    <string name="instruction_cancel">Cancel to return to your inventory.</string>
+    <string name="instruction_save">Save to add the new shoes to your inventory.</string>
+    <string name="instruction_tap">Tap the + icon to add a new shoe item to your inventory.</string>
+    <string name="instruction_text">
+        Continue onto the next screen to your impressive collection of shoes.
+        \nAnd follow the instructions to add new shoes to your inventory.
+    </string>
+    <string name="instruction_title">Instruction</string>
+
+    <string name="login">Login</string>
+    <string name="logout">Logout</string>
+    <string name="next">Next</string>
+    <string name="password">Password</string>
+    <string name="register">Register</string>
+    <string name="save">Save</string>
+
+    <string name="shoe_add">Add Shoes</string>
+    <string name="shoe_company">Shoe Company</string>
+    <string name="shoe_description">Shoe Description</string>
+    <string name="shoe_details">Shoe Details</string>
+    <string name="shoe_icon">Shoe Item Icon</string>
+    <string name="shoe_name">Shoe Name</string>
+    <string name="shoe_size">Shoe Size</string>
+
+    <string name="welcome_prompt">
+        Continue onto the next screen.
+        \nAnd follow the instructions on how to add new shoes to your inventory.
+    </string>
+    <string name="welcome_text">
+        See your marvelous, worldly, collection of shoes!
+        \nWhere you can view and manage your personal shoe inventory.
+    </string>
+    <string name="welcome_title">Welcome</string>
+</resources>

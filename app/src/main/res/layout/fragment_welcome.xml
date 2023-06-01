@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context=".onboarding.WelcomeFragment">
+
+    <!-- Layout was simple enough to justify using LinearLayout
+         I chose ConstraintLayout for practice even though layout is fairly simple -->
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/constraint_welcome"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <TextView
+            android:id="@+id/title_welcome"
+            style="@style/TitleStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/welcome_title"
+            app:layout_constraintBottom_toTopOf="@id/text_view_welcome"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/text_view_welcome"
+            style="@style/RegularTextStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/welcome_text"
+            app:layout_constraintBottom_toTopOf="@id/text_view_welcome_prompt"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/title_welcome" />
+
+        <TextView
+            android:id="@+id/text_view_welcome_prompt"
+            style="@style/RegularTextStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/welcome_prompt"
+            app:layout_constraintBottom_toTopOf="@id/button_next"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/text_view_welcome" />
+
+        <Button
+            android:id="@+id/button_next"
+            style="@style/ButtonStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/next"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/text_view_welcome_prompt" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</layout>

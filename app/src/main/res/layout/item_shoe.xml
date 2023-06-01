@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+        <variable
+            name="shoe"
+            type="com.kryptopass.shoeinventory.models.Shoe" />
+    </data>
+
+    <!-- Layout was simple enough to justify using LinearLayout
+         I chose ConstraintLayout for practice even though layout is fairly simple -->
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/small_margin"
+        android:background="@drawable/ic_item_background_gradient"
+        android:padding="@dimen/small_padding">
+
+        <ImageView
+            android:id="@+id/icon"
+            android:layout_width="wrap_content"
+            android:layout_height="0dp"
+            android:contentDescription="@string/shoe_icon"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@android:drawable/presence_online" />
+
+        <TextView
+            android:id="@+id/textViewName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/small_margin"
+            android:fontFamily="@font/roboto_medium"
+            android:textSize="@dimen/text_size"
+            android:text="@{shoe.name}"
+            app:layout_constraintStart_toEndOf="@id/icon"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/textViewSize"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/small_margin"
+            android:fontFamily="@font/roboto_medium"
+            android:textSize="@dimen/text_size_large"
+            android:text="@{Double.toString(shoe.size)}"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/textViewCompany"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/small_margin"
+            android:fontFamily="@font/roboto_medium"
+            android:textSize="@dimen/text_size_small"
+            android:text="@{shoe.company}"
+            app:layout_constraintStart_toEndOf="@id/icon"
+            app:layout_constraintTop_toBottomOf="@id/textViewName" />
+
+        <TextView
+            android:id="@+id/textViewDescription"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/small_margin"
+            android:fontFamily="@font/roboto"
+            android:text="@{shoe.description}"
+            app:layout_constraintStart_toEndOf="@id/icon"
+            app:layout_constraintTop_toBottomOf="@id/textViewCompany" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</layout>

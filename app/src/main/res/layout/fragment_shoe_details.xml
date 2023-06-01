@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context=".store.StoreDetailsFragment">
+
+    <data>
+
+        <variable
+            name="shoeDetailsViewModel"
+            type="com.kryptopass.shoeinventory.store.ShoeDetailsViewModel" />
+    </data>
+
+    <!-- Layout was simple enough to justify using LinearLayout
+         I chose ConstraintLayout for practice even though layout is fairly simple -->
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/constraint_shoe_details"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="@dimen/layout_margin">
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/text_field_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintBottom_toTopOf="@id/text_field_company"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/edit_text_name"
+                style="@style/RegularTextStyle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:autofillHints="@string/shoe_name"
+                android:ems="10"
+                android:hint="@string/shoe_name"
+                android:inputType="text"
+                android:text="@={shoeDetailsViewModel.shoe.name}" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/text_field_company"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintBottom_toTopOf="@id/text_field_size"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/text_field_name">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/edit_text_company"
+                style="@style/RegularTextStyle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:autofillHints="@string/shoe_company"
+                android:ems="10"
+                android:hint="@string/shoe_company"
+                android:inputType="text"
+                android:text="@={shoeDetailsViewModel.shoe.company}" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/text_field_size"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintBottom_toTopOf="@id/text_field_description"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/text_field_company">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/edit_text_size"
+                style="@style/RegularTextStyle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:autofillHints="@string/shoe_size"
+                android:ems="10"
+                android:hint="@string/shoe_size"
+                android:inputType="text"
+                android:text='@={""+shoeDetailsViewModel.shoe.size}' />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/text_field_description"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintBottom_toTopOf="@id/button_save"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/text_field_size">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/edit_text_description"
+                style="@style/RegularTextStyle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:autofillHints="@string/shoe_description"
+                android:ems="10"
+                android:hint="@string/shoe_description"
+                android:inputType="text"
+                android:text="@={shoeDetailsViewModel.shoe.description}" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <Button
+            android:id="@+id/button_save"
+            style="@style/ButtonStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/layout_margin"
+            android:onClick="@{() -> shoeDetailsViewModel.onSave()}"
+            android:text="@string/save"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@id/button_cancel"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/text_field_description" />
+
+        <Button
+            android:id="@+id/button_cancel"
+            style="@style/ButtonStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="@dimen/layout_margin"
+            android:onClick="@{() -> shoeDetailsViewModel.onCancel()}"
+            android:text="@string/cancel"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/button_save"
+            app:layout_constraintTop_toBottomOf="@id/text_field_description" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</layout>

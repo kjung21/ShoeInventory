@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context=".onboarding.InstructionsFragment">
+
+    <!-- Layout was simple enough to justify using LinearLayout
+         I chose ConstraintLayout for practice even though layout is fairly simple -->
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/constraint_instructions"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <TextView
+            android:id="@+id/instruction_title"
+            style="@style/TitleStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/instruction_title"
+            app:layout_constraintBottom_toTopOf="@id/text_view_instruction"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/text_view_instruction"
+            style="@style/RegularTextStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/instruction_text"
+            app:layout_constraintBottom_toTopOf="@id/text_view_instruction_one"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/instruction_title" />
+
+        <TextView
+            android:id="@+id/text_view_instruction_one"
+            style="@style/RegularTextStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/instruction_tap"
+            app:layout_constraintBottom_toTopOf="@id/text_view_instruction_two"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/text_view_instruction" />
+
+        <TextView
+            android:id="@+id/text_view_instruction_two"
+            style="@style/RegularTextStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/instruction_save"
+            app:layout_constraintBottom_toTopOf="@id/text_view_instruction_three"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/text_view_instruction_one" />
+
+        <TextView
+            android:id="@+id/text_view_instruction_three"
+            style="@style/RegularTextStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/instruction_cancel"
+            app:layout_constraintBottom_toTopOf="@id/button_accept"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/text_view_instruction_two" />
+
+        <Button
+            android:id="@+id/button_accept"
+            style="@style/ButtonStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/accept"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/text_view_instruction_three" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</layout>

@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="TitleStyle">
+        <item name="android:padding">@dimen/small_padding</item>
+        <item name="android:textSize">@dimen/text_size_title</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:fontFamily">@font/roboto_bold</item>
+        <item name="android:textColor">@color/primary</item>
+    </style>
+    <style name="RegularTextStyle">
+        <item name="android:padding">@dimen/layout_padding</item>
+        <item name="android:paddingStart">@dimen/layout_padding</item>
+        <item name="android:paddingEnd">@dimen/layout_padding</item>
+        <item name="android:textSize">@dimen/text_size</item>
+        <item name="android:fontFamily">@font/roboto</item>
+        <item name="android:textColor">@color/primary</item>
+    </style>
+    <style name="ButtonStyle">
+        <item name="android:padding">@dimen/layout_padding</item>
+        <item name="android:textSize">@dimen/text_size_large</item>
+        <item name="android:fontFamily">@font/roboto_bold</item>
+        <item name="android:textColor">@color/primaryDark</item>
+    </style>
+</resources>

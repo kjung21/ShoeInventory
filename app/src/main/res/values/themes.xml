@@ -1,0 +1,7 @@
+<resources>
+    <style name="Theme.ShoeInventory" parent="Theme.AppCompat.Light.DarkActionBar">
+        <item name="colorPrimary">@color/primary</item>
+        <item name="colorPrimaryDark">@color/primaryDark</item>
+        <item name="colorAccent">@color/accentDark</item>
+    </style>
+</resources>
