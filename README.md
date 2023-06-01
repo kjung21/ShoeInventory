@@ -18,4 +18,5 @@
 
 - [Exploring Android](https://commonsware.com/AndExplore/pages/index)
 - [Change App Icon](https://developer.android.com/codelabs/basic-android-kotlin-compose-training-change-app-icon#0)
+- [Detect memory leaks](https://square.github.io/leakcanary)
 
